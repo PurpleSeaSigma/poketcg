@@ -601,7 +601,7 @@ GetLoadedCard1RetreatCost::
 	call CountPokemonIDInBothPlayAreas
 	jr c, .muk_found
 	ld a, [wLoadedCard1RetreatCost]
-	sub c ; apply Retreat Aid for each Pkmn Power-capable Dodrio
+	sub 1 ; apply Retreat Aid only once for each Pkmn Power-capable Dodrio
 	ret nc
 	xor a
 	ret

@@ -803,7 +803,7 @@ ArbokCard:
 	db DIAMOND ; rarity
 	db LABORATORY | FOSSIL ; sets
 	db ARBOK
-	db 60 ; hp
+	db 70 ; hp
 	db STAGE1 ; stage
 	tx EkansName ; pre-evo name
 
@@ -835,7 +835,7 @@ ArbokCard:
 	db 0
 	db ATK_ANIM_POISON_FANG ; animation
 
-	db 2 ; retreat cost
+	db 1 ; retreat cost
 	db WR_PSYCHIC ; weakness
 	db NONE ; resistance
 	tx CobraName ; category
@@ -956,7 +956,7 @@ NidoqueenCard:
 	db STAR ; rarity
 	db MYSTERY | JUNGLE ; sets
 	db NIDOQUEEN
-	db 90 ; hp
+	db 100 ; hp
 	db STAGE2 ; stage
 	tx NidorinaName ; pre-evo name
 
@@ -988,7 +988,7 @@ NidoqueenCard:
 	db 0
 	db ATK_ANIM_HIT ; animation
 
-	db 3 ; retreat cost
+	db 2 ; retreat cost
 	db WR_PSYCHIC ; weakness
 	db NONE ; resistance
 	tx DrillName ; category
@@ -1109,7 +1109,7 @@ NidokingCard:
 	db STAR ; rarity
 	db EVOLUTION | NONE ; sets
 	db NIDOKING
-	db 90 ; hp
+	db 110 ; hp
 	db STAGE2 ; stage
 	tx NidorinoName ; pre-evo name
 
@@ -1466,7 +1466,7 @@ ParasectCard:
 	db DIAMOND ; rarity
 	db MYSTERY | JUNGLE ; sets
 	db PARASECT
-	db 60 ; hp
+	db 80 ; hp
 	db STAGE1 ; stage
 	tx ParasName ; pre-evo name
 
@@ -1855,7 +1855,7 @@ MukCard:
 	db 0
 	db ATK_ANIM_GOO ; animation
 
-	db 2 ; retreat cost
+	db 3 ; retreat cost
 	db WR_PSYCHIC ; weakness
 	db NONE ; resistance
 	tx SludgeName ; category
@@ -1925,7 +1925,7 @@ ExeggutorCard:
 	db DIAMOND ; rarity
 	db MYSTERY | JUNGLE ; sets
 	db EXEGGUTOR
-	db 80 ; hp
+	db 100 ; hp
 	db STAGE1 ; stage
 	tx ExeggcuteName ; pre-evo name
 
@@ -2050,7 +2050,7 @@ WeezingCard:
 	tx SelfdestructName ; name
 	tx WeezingsSelfdestructDescription ; description
 	dw NONE ; description (cont)
-	db 60 ; damage
+	db 80 ; damage
 	db DAMAGE_NORMAL ; category
 	dw WeezingSelfdestructEffectCommands ; effect commands
 	db HIGH_RECOIL ; flags 1
@@ -2078,7 +2078,7 @@ TangelaLv8Card:
 	db CIRCLE ; rarity
 	db LABORATORY | NONE ; sets
 	db TANGELA_LV8
-	db 50 ; hp
+	db 70 ; hp
 	db BASIC ; stage
 	dw NONE ; pre-evo name
 
@@ -2152,7 +2152,7 @@ TangelaLv12Card:
 	tx PoisonWhipName ; name
 	tx InflictPoisonDescription ; description
 	dw NONE ; description (cont)
-	db 10 ; damage
+	db 20 ; damage
 	db DAMAGE_NORMAL ; category
 	dw TangelaPoisonWhipEffectCommands ; effect commands
 	db INFLICT_POISON ; flags 1
@@ -2180,7 +2180,7 @@ ScytherCard:
 	db STAR ; rarity
 	db COLOSSEUM | JUNGLE ; sets
 	db SCYTHER
-	db 70 ; hp
+	db 60 ; hp
 	db BASIC ; stage
 	dw NONE ; pre-evo name
 
@@ -2199,7 +2199,7 @@ ScytherCard:
 	db ATK_ANIM_GLOW_EFFECT ; animation
 
 	; attack 2
-	energy COLORLESS, 3 ; energies
+	energy GRASS, 1, COLORLESS, 2 ; energies
 	tx SlashName ; name
 	dw NONE ; description
 	dw NONE ; description (cont)
@@ -2231,7 +2231,7 @@ PinsirCard:
 	db STAR ; rarity
 	db COLOSSEUM | JUNGLE ; sets
 	db PINSIR
-	db 60 ; hp
+	db 70 ; hp
 	db BASIC ; stage
 	dw NONE ; pre-evo name
 
@@ -2250,7 +2250,7 @@ PinsirCard:
 	db ATK_ANIM_HIT_EFFECT ; animation
 
 	; attack 2
-	energy GRASS, 2, COLORLESS, 2 ; energies
+	energy GRASS, 3, COLORLESS, 1 ; energies
 	tx GuillotineName ; name
 	dw NONE ; description
 	dw NONE ; description (cont)
@@ -2639,7 +2639,7 @@ ArcanineLv34Card:
 	db PROMOSTAR ; rarity
 	db PROMOTIONAL | PRO ; sets
 	db ARCANINE_LV34
-	db 70 ; hp
+	db 80 ; hp
 	db STAGE1 ; stage
 	tx GrowlitheName ; pre-evo name
 
@@ -2690,7 +2690,7 @@ ArcanineLv45Card:
 	db DIAMOND ; rarity
 	db COLOSSEUM | NONE ; sets
 	db ARCANINE_LV45
-	db 100 ; hp
+	db 110 ; hp
 	db STAGE1 ; stage
 	tx GrowlitheName ; pre-evo name
 
@@ -2894,7 +2894,7 @@ MagmarLv31Card:
 	db DIAMOND ; rarity
 	db LABORATORY | FOSSIL ; sets
 	db MAGMAR_LV31
-	db 70 ; hp
+	db 60 ; hp
 	db BASIC ; stage
 	dw NONE ; pre-evo name
 
@@ -3079,7 +3079,7 @@ MoltresLv35Card:
 	db 0
 	db ATK_ANIM_NONE ; animation
 
-	db 2 ; retreat cost
+	db 1 ; retreat cost
 	db NONE ; weakness
 	db WR_FIGHTING ; resistance
 	tx FlameName ; category
@@ -3525,7 +3525,7 @@ PoliwrathCard:
 	db ATK_ANIM_WATER_GUN ; animation
 
 	; attack 2
-	energy WATER, 2, COLORLESS, 2 ; energies
+	energy WATER, 3, COLORLESS, 1 ; energies
 	tx WhirlpoolName ; name
 	tx Discard1EnergyFromTargetDescription ; description
 	dw NONE ; description (cont)
@@ -3589,7 +3589,7 @@ TentacoolCard:
 	db 0
 	db ATK_ANIM_GOO ; animation
 
-	db 0 ; retreat cost
+	db 1 ; retreat cost
 	db WR_LIGHTNING ; weakness
 	db NONE ; resistance
 	tx JellyfishName ; category
@@ -3710,7 +3710,7 @@ DewgongCard:
 	db DIAMOND ; rarity
 	db COLOSSEUM | NONE ; sets
 	db DEWGONG
-	db 80 ; hp
+	db 90 ; hp
 	db STAGE1 ; stage
 	tx SeelName ; pre-evo name
 
@@ -3812,7 +3812,7 @@ CloysterCard:
 	db DIAMOND ; rarity
 	db MYSTERY | FOSSIL ; sets
 	db CLOYSTER
-	db 50 ; hp
+	db 70 ; hp
 	db STAGE1 ; stage
 	tx ShellderName ; pre-evo name
 
@@ -3895,7 +3895,7 @@ KrabbyCard:
 	db 0
 	db ATK_ANIM_HIT ; animation
 
-	db 2 ; retreat cost
+	db 1 ; retreat cost
 	db WR_LIGHTNING ; weakness
 	db NONE ; resistance
 	tx RiverCrabName ; category
@@ -3946,7 +3946,7 @@ KinglerCard:
 	db 0
 	db ATK_ANIM_HIT ; animation
 
-	db 3 ; retreat cost
+	db 2 ; retreat cost
 	db WR_LIGHTNING ; weakness
 	db NONE ; resistance
 	tx PincerName ; category
@@ -4048,7 +4048,7 @@ SeadraCard:
 	db 0
 	db ATK_ANIM_QUICK_ATTACK ; animation
 
-	db 1 ; retreat cost
+	db 0 ; retreat cost
 	db WR_LIGHTNING ; weakness
 	db NONE ; resistance
 	tx DragonName ; category
@@ -4354,7 +4354,7 @@ GyaradosCard:
 	db 0
 	db ATK_ANIM_BUBBLES ; animation
 
-	db 3 ; retreat cost
+	db 4 ; retreat cost
 	db WR_GRASS ; weakness
 	db WR_FIGHTING ; resistance
 	tx AtrociousName ; category
@@ -4424,7 +4424,7 @@ VaporeonLv29Card:
 	db DIAMOND ; rarity
 	db MYSTERY | GB ; sets
 	db VAPOREON_LV29
-	db 60 ; hp
+	db 70 ; hp
 	db STAGE1 ; stage
 	tx EeveeName ; pre-evo name
 
@@ -4577,7 +4577,7 @@ OmastarCard:
 	db DIAMOND ; rarity
 	db MYSTERY | FOSSIL ; sets
 	db OMASTAR
-	db 70 ; hp
+	db 80 ; hp
 	db STAGE2 ; stage
 	tx OmanyteName ; pre-evo name
 
@@ -4628,7 +4628,7 @@ ArticunoLv35Card:
 	db STAR ; rarity
 	db MYSTERY | FOSSIL ; sets
 	db ARTICUNO_LV35
-	db 70 ; hp
+	db 80 ; hp
 	db BASIC ; stage
 	dw NONE ; pre-evo name
 
@@ -5546,7 +5546,7 @@ ElectabuzzLv20Card:
 	db PROMOSTAR ; rarity
 	db PROMOTIONAL | PRO ; sets
 	db ELECTABUZZ_LV20
-	db 60 ; hp
+	db 90 ; hp
 	db BASIC ; stage
 	dw NONE ; pre-evo name
 
@@ -5616,7 +5616,7 @@ ElectabuzzLv35Card:
 	db ATK_ANIM_THUNDERSHOCK ; animation
 
 	; attack 2
-	energy LIGHTNING, 1, COLORLESS, 1 ; energies
+	energy LIGHTNING, 2 ; energies
 	tx ThunderpunchName ; name
 	tx ThunderpunchDescription ; description
 	dw NONE ; description (cont)
@@ -6158,7 +6158,7 @@ PrimeapeCard:
 	db DIAMOND ; rarity
 	db MYSTERY | JUNGLE ; sets
 	db PRIMEAPE
-	db 70 ; hp
+	db 80 ; hp
 	db STAGE1 ; stage
 	tx MankeyName ; pre-evo name
 
@@ -6265,15 +6265,15 @@ MachokeCard:
 	tx MachopName ; pre-evo name
 
 	; attack 1
-	energy FIGHTING, 2, COLORLESS, 1 ; energies
+	energy FIGHTING, 2 ; energies
 	tx KarateChopName ; name
-	tx KarateChopDescription ; description
+	dw NONE ; description
 	dw NONE ; description (cont)
-	db 50 ; damage
-	db DAMAGE_MINUS ; category
-	dw MachokeKarateChopEffectCommands ; effect commands
+	db 30 ; damage
+	db DAMAGE_NORMAL ; category
+	dw NONE ; effect commands
 	db NONE ; flags 1
-	db FLAG_2_BIT_7 ; flags 2
+	db NONE ; flags 2
 	db NONE ; flags 3
 	db 0
 	db ATK_ANIM_HIT ; animation
@@ -6332,11 +6332,11 @@ MachampCard:
 	; attack 2
 	energy FIGHTING, 3, COLORLESS, 1 ; energies
 	tx SeismicTossName ; name
-	dw NONE ; description
+        tx SonicboomDescription ; description
 	dw NONE ; description (cont)
-	db 60 ; damage
+	db 50 ; damage
 	db DAMAGE_NORMAL ; category
-	dw NONE ; effect commands
+	dw MagnetonSonicboomEffectCommands ; effect commands
 	db NONE ; flags 1
 	db NONE ; flags 2
 	db NONE ; flags 3
@@ -6464,7 +6464,7 @@ GolemCard:
 	db DIAMOND ; rarity
 	db EVOLUTION | FOSSIL ; sets
 	db GOLEM
-	db 80 ; hp
+	db 90 ; hp
 	db STAGE2 ; stage
 	tx GravelerName ; pre-evo name
 
@@ -6520,20 +6520,6 @@ OnixCard:
 	dw NONE ; pre-evo name
 
 	; attack 1
-	energy FIGHTING, 1 ; energies
-	tx RockThrowName ; name
-	dw NONE ; description
-	dw NONE ; description (cont)
-	db 10 ; damage
-	db DAMAGE_NORMAL ; category
-	dw NONE ; effect commands
-	db NONE ; flags 1
-	db NONE ; flags 2
-	db NONE ; flags 3
-	db 0
-	db ATK_ANIM_ROCK_THROW ; animation
-
-	; attack 2
 	energy FIGHTING, 2 ; energies
 	tx HardenName ; name
 	tx OnixsHardenDescription ; description
@@ -6546,6 +6532,20 @@ OnixCard:
 	db NONE ; flags 3
 	db 0
 	db ATK_ANIM_PROTECT ; animation
+
+	; attack 2
+	energy FIGHTING, 2, COLORLESS, 1 ; energies
+	tx RockThrowName ; name
+	dw NONE ; description
+	dw NONE ; description (cont)
+	db 40 ; damage
+	db DAMAGE_NORMAL ; category
+	dw NONE ; effect commands
+	db NONE ; flags 1
+	db NONE ; flags 2
+	db NONE ; flags 3
+	db 0
+	db ATK_ANIM_ROCK_THROW ; animation
 
 	db 3 ; retreat cost
 	db WR_GRASS ; weakness
@@ -6617,7 +6617,7 @@ MarowakLv26Card:
 	db DIAMOND ; rarity
 	db LABORATORY | JUNGLE ; sets
 	db MAROWAK_LV26
-	db 60 ; hp
+	db 70 ; hp
 	db STAGE1 ; stage
 	tx CuboneName ; pre-evo name
 
@@ -6668,7 +6668,7 @@ MarowakLv32Card:
 	db DIAMOND ; rarity
 	db EVOLUTION | GB ; sets
 	db MAROWAK_LV32
-	db 70 ; hp
+	db 90 ; hp
 	db STAGE1 ; stage
 	tx CuboneName ; pre-evo name
 
@@ -6789,7 +6789,7 @@ HitmonchanCard:
 	db ATK_ANIM_PUNCH ; animation
 
 	; attack 2
-	energy FIGHTING, 2, COLORLESS, 1 ; energies
+	energy FIGHTING, 3 ; energies
 	tx SpecialPunch ; name
 	dw NONE ; description
 	dw NONE ; description (cont)
@@ -6974,7 +6974,7 @@ KabutopsCard:
 	db STAR ; rarity
 	db MYSTERY | FOSSIL ; sets
 	db KABUTOPS
-	db 60 ; hp
+	db 70 ; hp
 	db STAGE2 ; stage
 	tx KabutoName ; pre-evo name
 
@@ -7159,7 +7159,7 @@ KadabraCard:
 	db 0
 	db ATK_ANIM_PSYCHIC_HIT ; animation
 
-	db 3 ; retreat cost
+	db 2 ; retreat cost
 	db WR_PSYCHIC ; weakness
 	db NONE ; resistance
 	tx PsiName ; category
@@ -7210,7 +7210,7 @@ AlakazamCard:
 	db 0
 	db ATK_ANIM_CONFUSE_RAY ; animation
 
-	db 3 ; retreat cost
+	db 2 ; retreat cost
 	db WR_PSYCHIC ; weakness
 	db NONE ; resistance
 	tx PsiName ; category
@@ -7331,7 +7331,7 @@ SlowbroCard:
 	db DIAMOND ; rarity
 	db LABORATORY | FOSSIL ; sets
 	db SLOWBRO
-	db 60 ; hp
+	db 70 ; hp
 	db STAGE1 ; stage
 	tx SlowpokeName ; pre-evo name
 
@@ -7388,20 +7388,6 @@ GastlyLv8Card:
 
 	; attack 1
 	energy PSYCHIC, 1 ; energies
-	tx SleepingGasName ; name
-	tx MayInflictSleepDescription ; description
-	dw NONE ; description (cont)
-	db 0 ; damage
-	db DAMAGE_NORMAL ; category
-	dw GastlySleepingGasEffectCommands ; effect commands
-	db INFLICT_SLEEP ; flags 1
-	db NONE ; flags 2
-	db NONE ; flags 3
-	db 0
-	db ATK_ANIM_SLEEPING_GAS ; animation
-
-	; attack 2
-	energy PSYCHIC, 1, COLORLESS, 1 ; energies
 	tx DestinyBondName ; name
 	tx DestinyBondDescription ; description
 	dw NONE ; description (cont)
@@ -7413,6 +7399,20 @@ GastlyLv8Card:
 	db SPECIAL_AI_HANDLING ; flags 3
 	db 3
 	db ATK_ANIM_GLOW_EFFECT ; animation
+
+	; attack 2
+	energy PSYCHIC, 1, COLORLESS, 1 ; energies
+	tx NightmareName ; name
+	tx InflictSleepDescription ; description
+	dw NONE ; description (cont)
+	db 10 ; damage
+	db DAMAGE_NORMAL ; category
+	dw HaunterNightmareEffectCommands ; effect commands
+	db INFLICT_SLEEP ; flags 1
+	db NONE ; flags 2
+	db NONE ; flags 3
+	db 0
+	db ATK_ANIM_NIGHTMARE ; animation
 
 	db 0 ; retreat cost
 	db NONE ; weakness
@@ -7841,7 +7841,7 @@ MewtwoLv53Card:
 	db STAR ; rarity
 	db LABORATORY | NONE ; sets
 	db MEWTWO_LV53
-	db 60 ; hp
+	db 80 ; hp
 	db BASIC ; stage
 	dw NONE ; pre-evo name
 
@@ -7873,7 +7873,7 @@ MewtwoLv53Card:
 	db 2
 	db ATK_ANIM_BARRIER ; animation
 
-	db 3 ; retreat cost
+	db 2 ; retreat cost
 	db WR_PSYCHIC ; weakness
 	db NONE ; resistance
 	tx GeneticName ; category
@@ -8230,7 +8230,7 @@ PidgeottoCard:
 	db 0
 	db ATK_ANIM_MIRROR_MOVE ; animation
 
-	db 1 ; retreat cost
+	db 2 ; retreat cost
 	db WR_LIGHTNING ; weakness
 	db WR_FIGHTING ; resistance
 	tx BirdName ; category
@@ -9046,7 +9046,7 @@ FarfetchdCard:
 	db 0
 	db ATK_ANIM_POT_SMASH ; animation
 
-	db 1 ; retreat cost
+	db 0 ; retreat cost
 	db WR_LIGHTNING ; weakness
 	db WR_FIGHTING ; resistance
 	tx WildDuckName ; category
@@ -9167,7 +9167,7 @@ LickitungCard:
 	db DIAMOND ; rarity
 	db MYSTERY | JUNGLE ; sets
 	db LICKITUNG
-	db 90 ; hp
+	db 70 ; hp
 	db BASIC ; stage
 	dw NONE ; pre-evo name
 
@@ -9250,7 +9250,7 @@ ChanseyCard:
 	db 80
 	db ATK_ANIM_HIT_RECOIL ; animation
 
-	db 1 ; retreat cost
+	db 3 ; retreat cost
 	db WR_FIGHTING ; weakness
 	db WR_PSYCHIC ; resistance
 	tx EggName ; category
@@ -9290,11 +9290,11 @@ KangaskhanCard:
 	; attack 2
 	energy COLORLESS, 4 ; energies
 	tx CometPunchName ; name
-	tx QuadrupleAttackX20Description ; description
+	tx TripleAttackX20Description ; description
 	dw NONE ; description (cont)
 	db 20 ; damage
 	db DAMAGE_X ; category
-	dw KangaskhanCometPunchEffectCommands ; effect commands
+	dw SandslashFurySwipesEffectCommands ; effect commands
 	db NONE ; flags 1
 	db NONE ; flags 2
 	db NONE ; flags 3

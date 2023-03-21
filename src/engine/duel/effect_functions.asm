@@ -6443,7 +6443,7 @@ MagnemiteSelfdestructEffect:
 	ret
 
 ZapdosThunder_Recoil50PercentEffect:
-	ld hl, 30
+	ld hl, 20
 	call LoadTxRam3
 	ldtx de, IfTailsDamageToYourselfTooText
 	call TossCoin_BankB
@@ -6451,12 +6451,12 @@ ZapdosThunder_Recoil50PercentEffect:
 	ret
 
 ZapdosThunder_RecoilEffect:
-	ld hl, 30
+	ld hl, 20
 	call LoadTxRam3
 	ldh a, [hTemp_ffa0]
 	or a
 	ret nz ; return if got heads
-	ld a, 30
+	ld a, 20
 	call DealRecoilDamageToSelf
 	ret
 
@@ -6716,11 +6716,6 @@ ChainLightningEffect:
 	call SwapTurn
 	call .DamageSameColorBench
 	call SwapTurn
-
-; own Bench
-	ld a, $01
-	ld [wIsDamageToSelf], a
-	call .DamageSameColorBench
 	ret
 
 .DamageSameColorBench
@@ -6761,7 +6756,7 @@ RaichuAgilityEffect:
 	ret
 
 RaichuThunder_Recoil50PercentEffect:
-	ld hl, 30
+	ld hl, 20
 	call LoadTxRam3
 	ldtx de, IfTailsDamageToYourselfTooText
 	call TossCoin_BankB
@@ -6769,12 +6764,12 @@ RaichuThunder_Recoil50PercentEffect:
 	ret
 
 RaichuThunder_RecoilEffect:
-	ld hl, 30
+	ld hl, 20
 	call LoadTxRam3
 	ldh a, [hTemp_ffa0]
 	or a
 	ret nz ; return if got heads
-	ld a, 30
+	ld a, 20
 	call DealRecoilDamageToSelf
 	ret
 
@@ -7762,15 +7757,15 @@ FetchEffect:
 	ret
 
 CometPunch_AIEffect:
-	ld a, (20 * 4) / 2
-	lb de, 0, 80
+	ld a, (20 * 3) / 2
+	lb de, 0, 60
 	jp SetExpectedAIDamage
 
 CometPunch_MultiplierEffect:
 	ld hl, 20
 	call LoadTxRam3
 	ldtx de, DamageCheckIfHeadsXDamageText
-	ld a, 4
+	ld a, 3
 	call TossCoinATimes_BankB
 	add a
 	call ATimes10
@@ -8984,6 +8979,10 @@ EnergyRemoval_EnergyCheck:
 	ret
 
 EnergyRemoval_PlayerSelection:
+	ldtx de, TrainerCardSuccessCheckText
+	call Func_2c08a
+	ldh [hTempList], a ; store coin result
+	ret nc
 	ldtx hl, ChoosePokemonToRemoveEnergyFromText
 	call DrawWideTextBox_WaitForInput
 	call SwapTurn
