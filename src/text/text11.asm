@@ -454,7 +454,7 @@ ThunderName:
 
 RaichusThunderDescription:
 	text "Flip a coin. If tails, Raichu does"
-	line "30 damage to itself."
+	line "20 damage to itself."
 	done
 
 RaichuLv40Description:
@@ -746,7 +746,7 @@ ZapdosLv40Description:
 
 ZapdosThunderDescription:
 	text "Flip a coin. If tails, Zapdos does"
-	line "30 damage to itself."
+	line "20 damage to itself."
 	done
 
 ThunderboltName:
